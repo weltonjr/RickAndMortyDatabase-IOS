@@ -43,13 +43,10 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segue" {
-//            if let viewController = segue.destination as? ExposicaoViewController {
-    //            if let pos = tableviewHome.indexPathForSelectedRow?.row{
-    //
-    //                viewController.model = NoticiaManager.instance.itens[pos]
-    //            }
-//            }
+        if let viewController = segue.destination as? ViewController {
+            if let pos = tableView.indexPathForSelectedRow?.row{
+                viewController.item = Service.instance.data[pos]
+            }
         }
     }
 }
