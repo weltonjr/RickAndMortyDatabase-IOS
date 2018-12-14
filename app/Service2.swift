@@ -5,7 +5,7 @@ class Service2{
     //Singleton com os dados do serviço
     static let instance = Service2()
     
-    var nextPageUrl = "https://rickandmortyapi.com/api/locations"
+    var nextPageUrl = "https://rickandmortyapi.com/api/location/"
     
     //Dados do serviço se já tiverem sido reuperados
     var data: [Item2] = []

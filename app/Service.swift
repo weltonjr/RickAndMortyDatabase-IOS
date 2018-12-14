@@ -5,7 +5,7 @@ class Service{
     //Singleton com os dados do serviço
     static let instance = Service()
     
-    var nextPageUrl = "https://rickandmortyapi.com/api/character"
+    var nextPageUrl = "https://rickandmortyapi.com/api/character/"
     
     //Dados do serviço se já tiverem sido reuperados
     var data: [Item] = []
@@ -36,11 +36,11 @@ class Service{
 }
 
 class Item{
-    let nome: String
+    var nome: String
     let imagem: String
-    let especie: String
-    let tipo: String
-    let sexo: String
+    var especie: String
+    var tipo: String
+    var sexo: String
     let status: String
     
     init(fromDictionary dados: [String:Any]){
@@ -50,5 +50,9 @@ class Item{
         sexo = (dados["gender"] as? String) ?? "Erro"
         tipo = (dados["type"] as? String) ?? "Erro"
         status = (dados["status"] as? String) ?? "Erro"
+        
+        tipo = tipo == "" ? "-" : tipo
+        especie = especie == "" ? "-" : especie
+        sexo = sexo == "" ? "-" : sexo
     }
 }
