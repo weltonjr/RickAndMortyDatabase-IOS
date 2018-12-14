@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		274B5E6172ABE9583B5A2F36 /* Pods_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 108AAEBFF0B29C2CF0D9B605 /* Pods_app.framework */; };
+		9EA31B3621C3259400AD74DF /* TableViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA31B3421C3259400AD74DF /* TableViewController2.swift */; };
+		9EA31B3921C325BF00AD74DF /* Service2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA31B3821C325BF00AD74DF /* Service2.swift */; };
 		9EF0347D21C1B806004A1DE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF0347C21C1B806004A1DE5 /* AppDelegate.swift */; };
 		9EF0347F21C1B806004A1DE5 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF0347E21C1B806004A1DE5 /* TableViewController.swift */; };
 		9EF0348221C1B806004A1DE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EF0348021C1B806004A1DE5 /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 /* Begin PBXFileReference section */
 		108AAEBFF0B29C2CF0D9B605 /* Pods_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E8BB2995FAE0CCBC58ADECC /* Pods-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-app/Pods-app.release.xcconfig"; sourceTree = "<group>"; };
+		9EA31B3421C3259400AD74DF /* TableViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController2.swift; sourceTree = "<group>"; };
+		9EA31B3821C325BF00AD74DF /* Service2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service2.swift; sourceTree = "<group>"; };
 		9EF0347921C1B806004A1DE5 /* app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EF0347C21C1B806004A1DE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EF0347E21C1B806004A1DE5 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 		9EF0347B21C1B806004A1DE5 /* app */ = {
 			isa = PBXGroup;
 			children = (
+				9EA31B3821C325BF00AD74DF /* Service2.swift */,
+				9EA31B3421C3259400AD74DF /* TableViewController2.swift */,
 				9EF0347C21C1B806004A1DE5 /* AppDelegate.swift */,
 				9EF0347E21C1B806004A1DE5 /* TableViewController.swift */,
 				9EF0348021C1B806004A1DE5 /* Main.storyboard */,
@@ -195,12 +201,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-app/Pods-app-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -214,10 +222,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EA31B3621C3259400AD74DF /* TableViewController2.swift in Sources */,
 				9EF0347F21C1B806004A1DE5 /* TableViewController.swift in Sources */,
 				9EF0347D21C1B806004A1DE5 /* AppDelegate.swift in Sources */,
 				9EF0349521C1DFE6004A1DE5 /* ViewController.swift in Sources */,
 				9EF0348F21C1C019004A1DE5 /* Service.swift in Sources */,
+				9EA31B3921C325BF00AD74DF /* Service2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

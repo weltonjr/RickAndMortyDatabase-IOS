@@ -39,12 +39,16 @@ class Item{
     let nome: String
     let imagem: String
     let especie: String
+    let tipo: String
     let sexo: String
+    let status: String
     
     init(fromDictionary dados: [String:Any]){
         nome = (dados["name"] as? String) ?? "Erro"
         imagem = (dados["image"] as? String) ?? "Erro"
         especie = (dados["species"] as? String) ?? "Erro"
         sexo = (dados["gender"] as? String) ?? "Erro"
+        tipo = (dados["type"] as? String) ?? "Erro"
+        status = (dados["status"] as? String) ?? "Erro"
     }
 }

@@ -7,22 +7,34 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ViewController: UIViewController {
 
     var item: Item?
     
+    @IBOutlet weak var especie: UILabel!
+    @IBOutlet weak var nome: UILabel!
     @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var tipo: UILabel!
+    @IBOutlet weak var sexo: UILabel!
+    @IBOutlet weak var status: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let imagem = item?.imagem {
-            let url = URL(string: imagem)
+        if let unwrapedItem = item {
+            especie.text = unwrapedItem.especie
+            nome.text = unwrapedItem.nome
+            tipo.text = unwrapedItem.tipo
+            sexo.text = unwrapedItem.sexo
+            status.text = unwrapedItem.status
             
-            if let data = try? Data(contentsOf: url!){
-                image.image = UIImage(data: data)
+            if let url = URL(string: unwrapedItem.imagem){
+                image.kf.indicatorType = .activity
+                image.kf.setImage(with: url)
             }
+            
         }
     }
     
